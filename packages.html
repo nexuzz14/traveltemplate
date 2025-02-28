@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Jelajahi semua paket wisata terbaik yang kami tawarkan dengan harga terjangkau dan fasilitas lengkap.">
+    <title>Semua Paket Wisata - Wonderful Journey</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        .transition-nav {
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 bg-gray-50">
+    <!-- Header & Navigation -->
+    <header class="w-full bg-white shadow-md z-50 transition-nav">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-blue-600">Wonderful<span class="text-green-500">Journey</span></a>
+            
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex space-x-6">
+                <a href="index.html#beranda" class="text-gray-800 hover:text-blue-600 transition">Beranda</a>
+                <a href="index.html#tentang-kami" class="text-gray-800 hover:text-blue-600 transition">Tentang Kami</a>
+                <a href="index.html#paket-wisata" class="text-gray-800 hover:text-blue-600 transition">Paket Wisata</a>
+                <a href="index.html#fasilitas" class="text-gray-800 hover:text-blue-600 transition">Fasilitas</a>
+                <a href="index.html#harga" class="text-gray-800 hover:text-blue-600 transition">Harga & Promo</a>
+                <a href="gallery.html" class="text-gray-800 hover:text-blue-600 transition">Galeri</a>
+                <!-- <a href="index.html#blog" class="text-gray-800 hover:text-blue-600 transition">Blog</a> -->
+                <a href="index.html#kontak" class="text-gray-800 hover:text-blue-600 transition">Kontak</a>
+            </nav>
+            
+            <!-- Mobile Navigation Toggle -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-800 focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white w-full transition-all">
+            <div class="container mx-auto px-4 py-3 flex flex-col space-y-3">
+                <a href="index.html#beranda" class="text-gray-800 hover:text-blue-600 transition py-2 border-b border-gray-100">Beranda</a>
+                <a href="index.html#tentang-kami" class="text-gray-800 hover:text-blue-600 transition py-2 border-b border-gray-100">Tentang Kami</a>
+                <a href="index.html#paket-wisata" class="text-gray-800 hover:text-blue-600 transition py-2 border-b border-gray-100">Paket Wisata</a>
+                <a href="index.html#fasilitas" class="text-gray-800 hover:text-blue-600 transition py-2 border-b border-gray-100">Fasilitas</a>
+                <a href="index.html#harga" class="text-gray-800 hover:text-blue-600 transition py-2 border-b border-gray-100">Harga & Promo</a>
+                <a href="gallery.html" class="text-gray-800 hover:text-blue-600 transition py-2 border-b border-gray-100">Galeri</a>
+                <!-- <a href="index.html#blog" class="text-gray-800 hover:text-blue-600 transition py-2 border-b border-gray-100">Blog</a> -->
+                <a href="index.html#kontak" class="text-gray-800 hover:text-blue-600 transition py-2">Kontak</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="relative pt-32 pb-16 bg-blue-700">
+        <div class="absolute inset-0 bg-cover bg-center opacity-20" style="background-image: url('/api/placeholder/1920/600')"></div>
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="text-center text-white">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Semua Paket Wisata</h1>
+                <p class="text-xl max-w-3xl mx-auto">Temukan berbagai pilihan paket wisata yang sesuai dengan kebutuhan dan budget Anda</p>
+                <div class="flex justify-center mt-6">
+                    <nav class="flex" aria-label="Breadcrumb">
+                        <ol class="inline-flex items-center space-x-1 md:space-x-3">
+                            <li class="inline-flex items-center">
+                                <a href="index.html" class="text-white hover:text-gray-200">Beranda</a>
+                            </li>
+                            <li>
+                                <div class="flex items-center">
+                                    <i class="fas fa-chevron-right text-sm mx-2"></i>
+                                    <span class="text-gray-200">Paket Wisata</span>
+                                </div>
+                            </li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <div class="bg-white py-6 shadow-md">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap items-center">
+                <div class="w-full md:w-auto mb-4 md:mb-0 md:mr-6">
+                    <span class="font-medium">Filter:</span>
+                </div>
+                <div class="w-full md:w-auto mb-4 md:mb-0 md:mr-4">
+                    <select class="w-full md:w-auto border border-gray-300 rounded-lg py-2 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <option value="">Semua Destinasi</option>
+                        <option value="bali">Bali</option>
+                        <option value="lombok">Lombok</option>
+                        <option value="yogyakarta">Yogyakarta</option>
+                        <option value="labuan-bajo">Labuan Bajo</option>
+                        <option value="raja-ampat">Raja Ampat</option>
+                    </select>
+                </div>
+                <div class="w-full md:w-auto mb-4 md:mb-0 md:mr-4">
+                    <select class="w-full md:w-auto border border-gray-300 rounded-lg py-2 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <option value="">Durasi</option>
+                        <option value="1-3">1-3 Hari</option>
+                        <option value="4-7">4-7 Hari</option>
+                        <option value="8+">8+ Hari</option>
+                    </select>
+                </div>
+                <div class="w-full md:w-auto mb-4 md:mb-0 md:mr-4">
+                    <select class="w-full md:w-auto border border-gray-300 rounded-lg py-2 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <option value="">Harga</option>
+                        <option value="0-5">< Rp 5 Juta</option>
+                        <option value="5-10">Rp 5 - 10 Juta</option>
+                        <option value="10+">Rp 10 Juta +</option>
+                    </select>
+                </div>
+                <div class="w-full md:w-auto ml-auto">
+                    <button class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-6 rounded-lg transition">Terapkan Filter</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Package List -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Package 1 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
+                    <img src="images/bali.jpg" alt="Bali Paradise" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 class="text-xl font-bold">Bali Paradise</h3>
+                            <span class="text-blue-600 font-bold">3 Hari 2 Malam</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Nikmati keindahan pulau Bali dengan paket wisata lengkap termasuk akomodasi, transportasi, dan pemandu wisata.</p>
+                        <div class="flex flex-wrap mb-4">
+                            <div class="w-1/2 flex items-center mb-2">
+                                <i class="fas fa-hotel text-blue-600 mr-2"></i>
+                                <span>Hotel Bintang 4</span>
+                            </div>
+                            <div class="w-1/2 flex items-center mb-2">
+                                <i class="fas fa-utensils text-blue-600 mr-2"></i>
+                                <span>Termasuk Makan</span>
+                            </div>
+                            <div class="w-1/2 flex items-center">
+                                <i class="fas fa-car text-blue-600 mr-2"></i>
+                                <span>Transportasi</span>
+                            </div>
+                            <div class="w-1/2 flex items-center">
+                                <i class="fas fa-user-tie text-blue-600 mr-2"></i>
+                                <span>Tour Guide</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <span class="text-gray-400 line-through">Rp 5.500.000</span>
+                                <span class="text-2xl font-bold text-blue-600">Rp 4.800.000</span>
+                                <span class="text-sm text-gray-600">/orang</span>
+                            </div>
+                            <a href="index.html#pemesanan" class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded font-medium transition">Pilih Paket</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Package 2 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
+                    <img src="images/moon.jpg" alt="Yogyakarta Heritage" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 class="text-xl font-bold">Yogyakarta Heritage</h3>
+                            <span class="text-blue-600 font-bold">4 Hari 3 Malam</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Jelajahi pesona budaya dan sejarah Yogyakarta dengan mengunjungi tempat-tempat ikonik seperti Candi Borobudur dan Prambanan.</p>
+                        <div class="flex flex-wrap mb-4">
+                            <div class="w-1/2 flex items-center mb-2">
+                                <i class="fas fa-hotel text-blue-600 mr-2"></i>
+                                <span>Hotel Bintang 3</span>
+                            </div>
+                            <div class="w-1/2 flex items-center mb-2">
+                                <i class="fas fa-utensils text-blue-600 mr-2"></i>
+                                <span>Termasuk Makan</span>
+                            </div>
+                            <div class="w-1/2 flex items-center">
+                                <i class="fas fa-car text-blue-600 mr-2"></i>
+                                <span>Transportasi</span>
+                            </div>
+                            <div class="w-1/2 flex items-center">
+                                <i class="fas fa-user-tie text-blue-600 mr-2"></i>
+                                <span>Tour Guide</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <span class="text-gray-400 line-through">Rp 4.200.000</span>
+                                <span class="text-2xl font-bold text-blue-600">Rp 3.750.000</span>
+                                <span class="text-sm text-gray-600">/orang</span>
+                            </div>
+                            <a href="index.html#pemesanan" class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded font-medium transition">Pilih Paket</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Package 3 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
+                    <img src="images/travel.jpg" alt="Labuan Bajo Adventure" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 class="text-xl font-bold">Labuan Bajo Adventure</h3>
+                            <span class="text-blue-600 font-bold">5 Hari 4 Malam</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Petualangan seru di Labuan Bajo, melihat Komodo dan menikmati keindahan Pulau Padar, Pink Beach, dan snorkeling.</p>
+                        <div class="flex flex-wrap mb-4">
+                            <div class="w-1/2 flex items-center mb-2">
+                                <i class="fas fa-hotel text-blue-600 mr-2"></i>
+                                <span>Hotel & Boat</span>
+                            </div>
+                            <div class="w-1/2 flex items-center mb-2">
+                                <i class="fas fa-utensils text-blue-600 mr-2"></i>
+                                <span>Full Board</span>
+                            </div>
+                            <div class="w-1/2 flex items-center">
+                                <i class="fas fa-car text-blue-600 mr-2"></i>
+                                <span>Transportasi</span>
+                            </div>
+                            <div class="w-1/2 flex items-center">
+                                <i class="fas fa-user-tie text-blue-600 mr-2"></i>
+                                <span>Tour Guide</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <span class="text-gray-400 line-through">Rp 8.500.000</span>
+                                <span class="text-2xl font-bold text-blue-600">Rp 7.250.000</span>
+                                <span class="text-sm text-gray-600">/orang</span>
+                            </div>
+                            <a href="index.html#pemesanan" class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded font-medium transition">Pilih Paket</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Package 4 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
+                    <div class="relative">
+                        <img src="images/jogja.jpg" alt="Lombok Exotic" class="w-full h-48 object-cover">
+                        <div class="absolute top-0 right-0 bg-red-500 text-white text-xs font-bold px-3 py-1 m-2 rounded">Promo!</div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 class="text-xl font-bold">Lombok Exotic</h3>
+                            <span class="text-blue-600 font-bold">4 Hari 3 Malam</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Kunjungi pantai-pantai eksotis di Lombok dan nikmati keindahan Gili Trawangan, Gili Meno, dan Gili Air.</p>
+                        <div class="flex flex-wrap mb-4">
+                            <div class="w-1/2 flex items-center mb-2">
+                                <i class="fas fa-hotel text-blue-600 mr-2"></i>
+                                <span>Hotel Bintang 4</span>
+                            </div>
+                            <div class="w-1/2 flex items-center mb-2">
+                                <i class="fas fa-utensils text-blue-600 mr-2"></i>
+                                <span>Termasuk Makan</span>
+                            </div>
+                            <div class="w-1/2 flex items-center">
+                                <i class="fas fa-car text-blue-600 mr-2"></i>
+                                <span>Transportasi</span>
+                            </div>
+                            <div class="w-1/2 flex items-center">
+                                <i class="fas fa-user-tie text-blue-600 mr-2"></i>
+                                <span>Tour Guide</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <span class="text-gray-400 line-through">Rp 6.800.000</span>
+                                <span class="text-2xl font-bold text-blue-600">Rp 5.950.000</span>
+                                <span class="text-sm text-gray-600">/orang</span>
+                            </div>
+                            <a href="index.html#pemesanan" class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded font-medium transition">Pilih Paket</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Package 5 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
+                    <img src="images/gal1.jpg" alt="Raja Ampat Paradise" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 class="text-xl font-bold">Raja Ampat Paradise</h3>
+                            <span class="text-blue-600 font-bold">7 Hari 6 Malam</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Jelajahi surga bawah laut di Raja Ampat dengan keindahan terumbu karang dan keanekaragaman hayati laut yang luar biasa.</p>
+                        <div class="flex flex-wrap mb-4">
+                            <div class="w-1/2 flex items-center mb-2">
+                                <i class="fas fa-hotel text-blue-600 mr-2"></i>
+                                <span>Resort & Homestay</span>
+                            </div>
+                            <div class="w-1/2 flex items-center mb-2">
+                                <i class="fas fa-utensils text-blue-600 mr-2"></i>
+                                <span>Full Board</span>
+                            </div>
+                            <div class="w-1/2 flex items-center">
+                                <i class="fas fa-car text-blue-600 mr-2"></i>
+                                <span>Transportasi</span>
+                            </div>
+                            <div class="w-1/2 flex items-center">
+                                <i class="fas fa-user-tie text-blue-600 mr-2"></i>
+                                <span>Tour Guide</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <span class="text-gray-400 line-through">Rp 13.500.000</span>
+                                <span class="text-2xl font-bold text-blue-600">Rp 12.250.000</span>
+                                <span class="text-sm text-gray-600">/orang</span>
+                            </div>
+                            <a href="index.html#pemesanan" class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded font-medium transition">Pilih Paket</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Package 6 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
+                    <img src="images/group.jpg" alt="Bromo Midnight Tour" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 class="text-xl font-bold">Bromo Midnight Tour</h3>
+                            <span class="text-blue-600 font-bold">2 Hari 1 Malam</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Saksikan keindahan matahari terbit di Gunung Bromo dengan pengalaman tur malam yang spektakuler.</p>
+                        <div class="flex flex-wrap mb-4">
+                            <div class="w-1/2 flex items-center mb-2">
+                                <i class="fas fa-hotel text-blue-600 mr-2"></i>
+                                <span>Hotel Bintang 3</span>
+                            </div>
+                            <div class="w-1/2 flex items-center mb-2">
+                                <i class="fas fa-utensils text-blue-600 mr-2"></i>
+                                <span>Termasuk Makan</span>
+                            </div>
+                            <div class="w-1/2 flex items-center">
+                                <i class="fas fa-car text-blue-600 mr-2"></i>
+                                <span>Jeep 4x4</span>
+                            </div>
+                            <div class="w-1/2 flex items-center">
+                                <i class="fas fa-user-tie text-blue-600 mr-2"></i>
+                                <span>Tour Guide</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <span class="text-gray-400 line-through">Rp 2.800.000</span>
+                                <span class="text-2xl font-bold text-blue-600">Rp 2.350.000</span>
+                                <span class="text-sm text-gray-600">/orang</span>
+                            </div>
+                            <a href="index.html#pemesanan" class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded font-medium transition">Pilih Paket</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Pagination -->
+            <div class="flex justify-center mt-12">
+                <nav aria-label="Page navigation">
+                    <ul class="flex items-center -space-x-px h-10 text-base">
+                        <li>
+                            <a href="#" class="flex items-center justify-center px-4 h-10 ml-0 leading-tight text-gray-500 bg-white border border-gray-300 rounded-l-lg hover:bg-gray-100 hover:text-gray-700">
+                                <i class="fas fa-chevron-left"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="flex items-center justify-center px-4 h-10 leading-tight text-blue-600 bg-blue-50 border border-gray-300 hover:bg-blue-100 hover:text-blue-700">1</a>
+                        </li>
+                        <li>
+                            <a href="#" class="flex items-center justify-center px-4 h-10 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700">2</a>
+                        </li>
+                        <li>
+                            <a href="#" class="flex items-center justify-center px-4 h-10 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700">3</a>
+                        </li>
+                        <li>
+                            <a href="#" class="flex items-center justify-center px-4 h-10 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700">4</a>
+                        </li>
+                        <li>
+                            <a href="#" class="flex items-center justify-center px-4 h-10 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700">5</a>
+                        </li>
+                        <li>
+                            <a href="#" class="flex items-center justify-center px-4 h-10 leading-tight text-gray-500 bg-white border border-gray-300 rounded-r-lg hover:bg-gray-100 hover:text-gray-700">
+                                <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-blue-600 relative">
+        <div class="container mx-auto px-4">
+            <div class="text-center text-white">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Ingin Merencanakan Perjalanan Khusus?</h2>
+                <p class="text-xl max-w-3xl mx-auto mb-8">Kami dapat menyesuaikan paket perjalanan sesuai dengan kebutuhan dan anggaran Anda. Hubungi kami untuk informasi lebih lanjut.</p>
+                <a href="index.html#kontak" class="inline-block bg-white text-blue-600 hover:bg-gray-100 py-3 px-8 rounded-lg text-lg font-semibold transition">Hubungi Kami</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap -mx-4">
+                <!-- Company Info -->
+                <div class="w-full md:w-1/4 px-4 mb-8 md:mb-0">
+                    <h3 class="text-2xl font-bold mb-4">Wonderful<span class="text-green-500">Journey</span></h3>
+                    <p class="text-gray-400 mb-4">Menyediakan pengalaman wisata terbaik dengan pelayanan profesional dan harga terjangkau.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="w-full md:w-1/4 px-4 mb-8 md:mb-0">
+                    <h4 class="text-lg font-bold mb-4">Link Cepat</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html#beranda" class="text-gray-400 hover:text-white transition">Beranda</a></li>
+                        <li><a href="index.html#tentang-kami" class="text-gray-400 hover:text-white transition">Tentang Kami</a></li>
+                        <li><a href="index.html#paket-wisata" class="text-gray-400 hover:text-white transition">Paket Wisata</a></li>
+                        <li><a href="gallery.html" class="text-gray-400 hover:text-white transition">Galeri</a></li>
+                        <!-- <li><a href="index.html#blog" class="text-gray-400 hover:text-white transition">Blog</a></li> -->
+                        <li><a href="index.html#kontak" class="text-gray-400 hover:text-white transition">Kontak</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="w-full md:w-1/4 px-4 mb-8 md:mb-0">
+                    <h4 class="text-lg font-bold mb-4">Informasi Kontak</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-green-500 mt-1 mr-3"></i>
+                            <span class="text-gray-400">Jl. Wisata Indah No. 123, Jakarta Selatan</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt text-green-500 mr-3"></i>
+                            <span class="text-gray-400">+62 812 3456 7890</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope text-green-500 mr-3"></i>
+                            <span class="text-gray-400">info@wonderfuljourney.com</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Newsletter -->
+                <div class="w-full md:w-1/4 px-4">
+                    <h4 class="text-lg font-bold mb-4">Newsletter</h4>
+                    <p class="text-gray-400 mb-4">Dapatkan informasi terbaru tentang promo dan paket wisata kami.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Email Anda" class="px-4 py-2 w-full rounded-l-lg focus:outline-none text-gray-800">
+                        <button type="submit" class="bg-green-500 hover:bg-green-600 px-4 py-2 rounded-r-lg transition">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+                <p class="text-gray-400">&copy; 2025 Wonderful Journey. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        // Mobile Menu Toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+        
+        // Filter buttons functionality
+        const filterButtons = document.querySelectorAll('.rounded-full');
+        filterButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                // Reset all buttons
+                filterButtons.forEach(btn => {
+                    btn.classList.remove('bg-blue-600', 'text-white');
+                    btn.classList.add('bg-gray-200', 'text-gray-800');
+                });
+                
+                // Set active button
+                this.classList.remove('bg-gray-200', 'text-gray-800');
+                this.classList.add('bg-blue-600', 'text-white');
+                
+                // Here you would normally filter the gallery items
+                // This is a placeholder for actual filtering functionality
+            });
+        });
+    </script>

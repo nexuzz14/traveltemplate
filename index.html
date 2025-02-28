@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Jelajahi destinasi wisata terbaik dengan paket wisata yang menarik. Fasilitas lengkap, harga terjangkau, dan pengalaman tak terlupakan.">
+    <title>Wonderful Journey - Destinasi Wisata Terbaik</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/YOUR_KIT_CODE.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        .bg-overlay {
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .transition-nav {
+            transition: all 0.3s ease;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #1e88e5 0%, #1565c0 100%);
+        }
+        .input-focus:focus {
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.3);
+        }
+        .form-container {
+            background-image: url('/api/placeholder/800/600');
+            background-size: cover;
+            background-position: center;
+        }
+        .form-overlay {
+            backdrop-filter: blur(8px);
+            background-color: rgba(255, 255, 255, 0.95);
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 bg-gray-50">
+    <!-- Header & Navigation -->
+    <header class="w-full bg-white shadow-md z-50 transition-nav">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-blue-600">Wonderful<span class="text-green-500">Journey</span></a>
+            
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex space-x-6">
+                <a href="index.html#beranda" class="text-gray-800 hover:text-blue-600 transition">Beranda</a>
+                <a href="index.html#tentang-kami" class="text-gray-800 hover:text-blue-600 transition">Tentang Kami</a>
+                <a href="index.html#paket-wisata" class="text-gray-800 hover:text-blue-600 transition">Paket Wisata</a>
+                <a href="index.html#fasilitas" class="text-gray-800 hover:text-blue-600 transition">Fasilitas</a>
+                <a href="index.html#harga" class="text-gray-800 hover:text-blue-600 transition">Harga & Promo</a>
+                <a href="index.html#galeri" class="text-gray-800 hover:text-blue-600 transition">Galeri</a>
+                <!-- <a href="index.html#blog" class="text-gray-800 hover:text-blue-600 transition">Blog</a> -->
+                <a href="index.html#kontak" class="text-gray-800 hover:text-blue-600 transition">Kontak</a>
+            </nav>
+            
+            <!-- Mobile Navigation Toggle -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-800 focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white w-full transition-all">
+            <div class="container mx-auto px-4 py-3 flex flex-col space-y-3">
+                <a href="index.html#beranda" class="text-gray-800 hover:text-blue-600 transition py-2 border-b border-gray-100">Beranda</a>
+                <a href="index.html#tentang-kami" class="text-gray-800 hover:text-blue-600 transition py-2 border-b border-gray-100">Tentang Kami</a>
+                <a href="index.html#paket-wisata" class="text-gray-800 hover:text-blue-600 transition py-2 border-b border-gray-100">Paket Wisata</a>
+                <a href="index.html#fasilitas" class="text-gray-800 hover:text-blue-600 transition py-2 border-b border-gray-100">Fasilitas</a>
+                <a href="index.html#harga" class="text-gray-800 hover:text-blue-600 transition py-2 border-b border-gray-100">Harga & Promo</a>
+                <a href="index.html#galeri" class="text-gray-800 hover:text-blue-600 transition py-2 border-b border-gray-100">Galeri</a>
+                <!-- <a href="index.html#blog" class="text-gray-800 hover:text-blue-600 transition py-2 border-b border-gray-100">Blog</a> -->
+                <a href="index.html#kontak" class="text-gray-800 hover:text-blue-600 transition py-2">Kontak</a>
+            </div>
+        </div>
+    </header>
+    
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+    
+
+    <!-- Hero Section (Landing Page) -->
+    <section id="beranda" class="relative h-screen flex items-center justify-center">
+        <div class="absolute inset-0 bg-cover bg-center z-0" 
+            style="background-image: url('images/bromo.jpg');">
+        </div>
+        <div class="absolute inset-0 bg-overlay z-10"></div>
+        <div class="container mx-auto px-4 z-20 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">Jelajahi Keindahan Indonesia</h1>
+            <p class="text-xl md:text-2xl text-white mb-10 max-w-3xl mx-auto">Temukan pengalaman wisata terbaik dengan paket perjalanan yang dirancang khusus untuk Anda.</p>
+            <div class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-4">
+                <a href="#paket-wisata" class="bg-blue-600 hover:bg-blue-700 text-white py-3 px-8 rounded-lg text-lg font-semibold transition">Lihat Paket</a>
+                <a href="#pemesanan" class="bg-green-500 hover:bg-green-600 text-white py-3 px-8 rounded-lg text-lg font-semibold transition">Pesan Sekarang</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Features Bar -->
+    <div class="bg-blue-600 text-white py-6">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap justify-center items-center text-center">
+                <div class="w-full md:w-1/4 px-4 mb-4 md:mb-0">
+                    <i class="fas fa-map-marker-alt text-3xl mb-2"></i>
+                    <p>Destinasi Terbaik</p>
+                </div>
+                <div class="w-full md:w-1/4 px-4 mb-4 md:mb-0">
+                    <i class="fas fa-sun text-3xl mb-2"></i>
+                    <p>Pengalaman Tak Terlupakan</p>
+                </div>
+                <div class="w-full md:w-1/4 px-4 mb-4 md:mb-0">
+                    <i class="fas fa-wallet text-3xl mb-2"></i>
+                    <p>Harga Terjangkau</p>
+                </div>
+                <div class="w-full md:w-1/4 px-4">
+                    <i class="fas fa-heart text-3xl mb-2"></i>
+                    <p>Layanan Ramah</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Us Section -->
+    <section id="tentang-kami" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Tentang Kami</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Kenali kami lebih dekat dan temukan mengapa kami menjadi pilihan terbaik untuk perjalanan wisata Anda.</p>
+            </div>
+            
+            <div class="flex flex-wrap items-center">
+                <div class="w-full md:w-1/2 mb-8 md:mb-0">
+                    <img src="images/ttg.jpg" alt="Tentang Wonderful Journey" class="rounded-lg shadow-lg mx-auto">
+                </div>
+                <div class="w-full md:w-1/2 md:pl-12">
+                    <h3 class="text-2xl font-bold mb-4">Wonderful Journey</h3>
+                    <p class="text-gray-600 mb-4">Wonderful Journey adalah perusahaan tour & travel yang didirikan pada tahun 2015 dengan visi untuk memberikan pengalaman wisata terbaik bagi setiap pelanggan. Kami percaya bahwa perjalanan bukan hanya tentang destinasi, melainkan juga tentang pengalaman dan kenangan yang tercipta.</p>
+                    <p class="text-gray-600 mb-6">Dengan tim profesional yang berpengalaman, kami berkomitmen untuk memberikan layanan terbaik, fasilitas yang nyaman, dan harga yang kompetitif.</p>
+                    
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span>5+ Tahun Pengalaman</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span>Pemandu Profesional</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span>100+ Destinasi</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span>Kepuasan Pelanggan</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tour Packages Section -->
+    <section id="paket-wisata" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Paket Wisata</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Pilih paket wisata yang sesuai dengan kebutuhan dan budget Anda.</p>
+            </div>
+            
+            <div class="flex flex-wrap -mx-4">
+                <!-- Package 1 -->
+                <div class="w-full md:w-1/3 px-4 mb-8">
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
+                        <img src="images/bali.jpg" alt="Bali Paradise" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <div class="flex justify-between items-center mb-4">
+                                <h3 class="text-xl font-bold">Bali Paradise</h3>
+                                <span class="text-blue-600 font-bold">3 Hari 2 Malam</span>
+                            </div>
+                            <p class="text-gray-600 mb-4">Nikmati keindahan pulau Bali dengan paket wisata lengkap termasuk akomodasi, transportasi, dan pemandu wisata.</p>
+                            <div class="flex flex-wrap mb-4">
+                                <div class="w-1/2 flex items-center mb-2">
+                                    <i class="fas fa-hotel text-blue-600 mr-2"></i>
+                                    <span>Hotel Bintang 4</span>
+                                </div>
+                                <div class="w-1/2 flex items-center mb-2">
+                                    <i class="fas fa-utensils text-blue-600 mr-2"></i>
+                                    <span>Termasuk Makan</span>
+                                </div>
+                                <div class="w-1/2 flex items-center">
+                                    <i class="fas fa-car text-blue-600 mr-2"></i>
+                                    <span>Transportasi</span>
+                                </div>
+                                <div class="w-1/2 flex items-center">
+                                    <i class="fas fa-user-tie text-blue-600 mr-2"></i>
+                                    <span>Tour Guide</span>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <span class="text-gray-400 line-through">Rp 5.500.000</span>
+                                    <span class="text-2xl font-bold text-blue-600">Rp 4.800.000</span>
+                                    <span class="text-sm text-gray-600">/orang</span>
+                                </div>
+                                <a href="#pemesanan" class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded font-medium transition">Pilih Paket</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Package 2 -->
+                <div class="w-full md:w-1/3 px-4 mb-8">
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
+                        <img src="images/jogja.jpg" alt="Yogyakarta Heritage" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <div class="flex justify-between items-center mb-4">
+                                <h3 class="text-xl font-bold">Yogyakarta Heritage</h3>
+                                <span class="text-blue-600 font-bold">4 Hari 3 Malam</span>
+                            </div>
+                            <p class="text-gray-600 mb-4">Jelajahi pesona budaya dan sejarah Yogyakarta dengan mengunjungi tempat-tempat ikonik seperti Candi Borobudur dan Prambanan.</p>
+                            <div class="flex flex-wrap mb-4">
+                                <div class="w-1/2 flex items-center mb-2">
+                                    <i class="fas fa-hotel text-blue-600 mr-2"></i>
+                                    <span>Hotel Bintang 3</span>
+                                </div>
+                                <div class="w-1/2 flex items-center mb-2">
+                                    <i class="fas fa-utensils text-blue-600 mr-2"></i>
+                                    <span>Termasuk Makan</span>
+                                </div>
+                                <div class="w-1/2 flex items-center">
+                                    <i class="fas fa-car text-blue-600 mr-2"></i>
+                                    <span>Transportasi</span>
+                                </div>
+                                <div class="w-1/2 flex items-center">
+                                    <i class="fas fa-user-tie text-blue-600 mr-2"></i>
+                                    <span>Tour Guide</span>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <span class="text-gray-400 line-through">Rp 4.200.000</span>
+                                    <span class="text-2xl font-bold text-blue-600">Rp 3.750.000</span>
+                                    <span class="text-sm text-gray-600">/orang</span>
+                                </div>
+                                <a href="#pemesanan" class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded font-medium transition">Pilih Paket</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Package 3 -->
+                <div class="w-full md:w-1/3 px-4 mb-8">
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
+                        <img src="images/bajo.jpg" alt="Labuan Bajo Adventure" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <div class="flex justify-between items-center mb-4">
+                                <h3 class="text-xl font-bold">Labuan Bajo Adventure</h3>
+                                <span class="text-blue-600 font-bold">5 Hari 4 Malam</span>
+                            </div>
+                            <p class="text-gray-600 mb-4">Petualangan seru di Labuan Bajo, melihat Komodo dan menikmati keindahan Pulau Padar, Pink Beach, dan snorkeling.</p>
+                            <div class="flex flex-wrap mb-4">
+                                <div class="w-1/2 flex items-center mb-2">
+                                    <i class="fas fa-hotel text-blue-600 mr-2"></i>
+                                    <span>Hotel & Boat</span>
+                                </div>
+                                <div class="w-1/2 flex items-center mb-2">
+                                    <i class="fas fa-utensils text-blue-600 mr-2"></i>
+                                    <span>Full Board</span>
+                                </div>
+                                <div class="w-1/2 flex items-center">
+                                    <i class="fas fa-car text-blue-600 mr-2"></i>
+                                    <span>Transportasi</span>
+                                </div>
+                                <div class="w-1/2 flex items-center">
+                                    <i class="fas fa-user-tie text-blue-600 mr-2"></i>
+                                    <span>Tour Guide</span>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <span class="text-gray-400 line-through">Rp 8.500.000</span>
+                                    <span class="text-2xl font-bold text-blue-600">Rp 7.250.000</span>
+                                    <span class="text-sm text-gray-600">/orang</span>
+                                </div>
+                                <a href="#pemesanan" class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded font-medium transition">Pilih Paket</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-8">
+                <a href="packages.html" class="inline-block bg-blue-600 hover:bg-blue-700 text-white py-3 px-8 rounded-lg text-lg font-semibold transition">Lihat Semua Paket</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Facilities Section -->
+    <section id="fasilitas" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Fasilitas</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Kami menyediakan berbagai fasilitas untuk memastikan kenyamanan perjalanan Anda.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition text-center">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-car text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Transportasi</h3>
+                    <p class="text-gray-600">Mobil nyaman dan ber-AC untuk seluruh perjalanan Anda. Tersedia juga pilihan transportasi lain.</p>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition text-center">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-hotel text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Akomodasi</h3>
+                    <p class="text-gray-600">Pilihan hotel dari bintang 3 hingga bintang 5 dengan lokasi strategis dan fasilitas lengkap.</p>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition text-center">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-utensils text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Kuliner</h3>
+                    <p class="text-gray-600">Nikmati makanan lokal dan internasional yang lezat selama perjalanan wisata Anda.</p>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition text-center">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-user-tie text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Tour Guide</h3>
+                    <p class="text-gray-600">Pemandu wisata profesional dan berpengalaman yang akan menemani seluruh perjalanan Anda.</p>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition text-center">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-camera text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Dokumentasi</h3>
+                    <p class="text-gray-600">Jasa dokumentasi untuk mengabadikan momen berharga selama perjalanan wisata Anda.</p>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition text-center">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-medkit text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">P3K</h3>
+                    <p class="text-gray-600">Kotak P3K dan dukungan medis dasar selama perjalanan wisata untuk keamanan Anda.</p>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition text-center">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-wifi text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Wi-Fi</h3>
+                    <p class="text-gray-600">Akses internet selama perjalanan agar Anda tetap terhubung dengan dunia luar.</p>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition text-center">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-umbrella-beach text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Aktivitas Tambahan</h3>
+                    <p class="text-gray-600">Berbagai pilihan aktivitas tambahan seperti snorkeling, diving, atau rafting.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prices & Promos Section -->
+    <section id="harga" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Harga & Promo</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Nikmati paket wisata berkualitas dengan harga terbaik dan berbagai promo menarik.</p>
+            </div>
+            
+            <div class="flex flex-wrap -mx-4">
+                <!-- Regular Package -->
+                <div class="w-full md:w-1/3 px-4 mb-8">
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden h-full">
+                        <div class="bg-blue-600 text-white py-4 px-6 text-center">
+                            <h3 class="text-2xl font-bold">Paket Reguler</h3>
+                            <p class="opacity-80">Untuk perjalanan standar</p>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-center mb-6">
+                                <span class="text-4xl font-bold text-blue-600">Rp 3.500.000</span>
+                                <span class="text-gray-600">/orang</span>
+                            </div>
+                            <ul class="space-y-3 mb-8">
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-green-500 mr-2"></i>
+                                    <span>3 Hari 2 Malam</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-green-500 mr-2"></i>
+                                    <span>Hotel Bintang 3</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-green-500 mr-2"></i>
+                                    <span>Transportasi AC</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-green-500 mr-2"></i>
+                                    <span>Makan 2x Sehari</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-green-500 mr-2"></i>
+                                    <span>Tour Guide</span>
+                                </li>
+                                <li class="flex items-center opacity-50">
+                                    <i class="fas fa-times text-red-500 mr-2"></i>
+                                    <span>Aktivitas Tambahan</span>
+                                </li>
+                                <li class="flex items-center opacity-50">
+                                    <i class="fas fa-times text-red-500 mr-2"></i>
+                                    <span>Dokumentasi</span>
+                                </li>
+                            </ul>
+                            <div class="text-center">
+                                <a href="#pemesanan" class="inline-block bg-blue-600 hover:bg-blue-700 text-white py-2 px-6 rounded-lg font-medium transition w-full">Pesan Sekarang</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Premium Package -->
+                <div class="w-full md:w-1/3 px-4 mb-8">
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden h-full transform md:scale-105 relative z-10">
+                        <div class="absolute top-5 right-5">
+                            <span class="bg-yellow-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase">Terlaris</span>
+                        </div>
+                        <div class="bg-green-600 text-white py-4 px-6 text-center">
+                            <h3 class="text-2xl font-bold">Paket Premium</h3>
+                            <p class="opacity-80">Untuk pengalaman terbaik</p>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-center mb-6">
+                                <span class="text-4xl font-bold text-green-600">Rp 5.250.000</span>
+                                <span class="text-gray-600">/orang</span>
+                            </div>
+                            <ul class="space-y-3 mb-8">
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-green-500 mr-2"></i>
+                                    <span>4 Hari 3 Malam</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-green-500 mr-2"></i>
+                                    <span>Hotel Bintang 4</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-green-500 mr-2"></i>
+                                    <span>Transportasi Premium</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-green-500 mr-2"></i>
+                                    <span>Makan 3x Sehari</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-green-500 mr-2"></i>
+                                    <span>Tour Guide Profesional</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-green-500 mr-2"></i>
+                                    <span>1 Aktivitas Tambahan</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-green-500 mr-2"></i>
+                                    <span>Dokumentasi</span>
+                                </li>
+                            </ul>
+                            <div class="text-center">
+                                <a href="#pemesanan" class="inline-block bg-green-600 hover:bg-green-700 text-white py-2 px-6 rounded-lg font-medium transition w-full">Pesan Sekarang</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Luxury Package -->
+                <div class="w-full md:w-1/3 px-4 mb-8">
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden h-full">
+                        <div class="bg-purple-600 text-white py-4 px-6 text-center">
+                            <h3 class="text-2xl font-bold">Paket Luxury</h3>
+                            <p class="opacity-80">Untuk yang menginginkan kemewahan</p>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-center mb-6">
+                                <span class="text-4xl font-bold text-purple-600">Rp 7.900.000</span>
+                                <span class="text-gray-600">/orang</span>
+                            </div>
+                            <ul class="space-y-3 mb-8">
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-green-500 mr-2"></i>
+                                    <span>5 Hari 4 Malam</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-green-500 mr-2"></i>
+                                    <span>Hotel Bintang 5</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-green-500 mr-2"></i>
+                                    <span>Private Transport</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-green-500 mr-2"></i>
+                                    <span>Full Board Meals</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-green-500 mr-2"></i>
+                                    <span>Tour Guide Ekslusif</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-green-500 mr-2"></i>
+                                    <span>3 Aktivitas Tambahan</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-green-500 mr-2"></i>
+                                    <span>Dokumentasi Profesional</span>
+                                </li>
+                            </ul>
+                            <div class="text-center">
+                                <a href="#pemesanan" class="inline-block bg-purple-600 hover:bg-purple-700 text-white py-2 px-6 rounded-lg font-medium transition w-full">Pesan Sekarang</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Promos Section -->
+            <div class="mt-16">
+                <div class="text-center mb-12">
+                    <h3 class="text-2xl md:text-3xl font-bold mb-4">Promo Spesial</h3>
+                    <p class="text-lg text-gray-600">Dapatkan penawaran spesial untuk perjalanan wisata Anda.</p>
+                </div>
+                
+                <div class="flex flex-wrap -mx-4">
+                    <!-- Promo 1 -->
+                    <div class="w-full md:w-1/2 lg:w-1/3 px-4 mb-8">
+                        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                            <div class="relative">
+                                <img src="images/travel.jpg" alt="Early Bird Promo" class="w-full h-48 object-cover">
+                                <div class="absolute top-0 right-0 bg-red-600 text-white px-4 py-2 font-bold">
+                                    Hemat 20%
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <h4 class="text-xl font-bold mb-2">Early Bird Promo</h4>
+                                <p class="text-gray-600 mb-4">Dapatkan diskon 20% untuk pemesanan 3 bulan sebelum keberangkatan.</p>
+                                <div class="flex items-center justify-between">
+                                    <span class="text-sm text-gray-500">Berlaku hingga 31 Maret 2025</span>
+                                    <a href="#pemesanan" class="bg-red-600 hover:bg-red-700 text-white py-2 px-4 rounded font-medium transition">Klaim Sekarang</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Promo 2 -->
+                    <div class="w-full md:w-1/2 lg:w-1/3 px-4 mb-8">
+                        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                            <div class="relative">
+                                <img src="images/group.jpg" alt="Group Discount" class="w-full h-48 object-cover">
+                                <div class="absolute top-0 right-0 bg-orange-500 text-white px-4 py-2 font-bold">
+                                    Hemat 15%
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <h4 class="text-xl font-bold mb-2">Group Discount</h4>
+                                <p class="text-gray-600 mb-4">Diskon 15% untuk grup dengan minimal 10 orang.</p>
+                                <div class="flex items-center justify-between">
+                                    <span class="text-sm text-gray-500">Tidak ada batas waktu</span>
+                                    <a href="#pemesanan" class="bg-orange-500 hover:bg-orange-600 text-white py-2 px-4 rounded font-medium transition">Klaim Sekarang</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Promo 3 -->
+                    <div class="w-full md:w-1/2 lg:w-1/3 px-4 mb-8 lg:mx-auto">
+                        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                            <div class="relative">
+                                <img src="images/moon.jpg" alt="Special Honeymoon Package" class="w-full h-48 object-cover">
+                                <div class="absolute top-0 right-0 bg-pink-600 text-white px-4 py-2 font-bold">
+                                    Paket Spesial
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <h4 class="text-xl font-bold mb-2">Paket Bulan Madu</h4>
+                                <p class="text-gray-600 mb-4">Paket khusus bulan madu dengan fasilitas dan pengalaman romantis.</p>
+                                <div class="flex items-center justify-between">
+                                    <span class="text-sm text-gray-500">Sesuai permintaan</span>
+                                    <a href="#pemesanan" class="bg-pink-600 hover:bg-pink-700 text-white py-2 px-4 rounded font-medium transition">Info Lebih Lanjut</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Form Section -->
+    <section id="pemesanan" class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800">Formulir Pemesanan</h2>
+                <div class="relative w-24 h-1 bg-blue-600 mx-auto mb-6 rounded-full">
+                    <div class="absolute -top-2 left-1/2 transform -translate-x-1/2 w-5 h-5 bg-blue-600 rounded-full"></div>
+                </div>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Buat perjalanan tak terlupakan bersama kami dengan mengisi formulir berikut</p>
+            </div>
+            
+            <div class="max-w-5xl mx-auto form-container rounded-xl shadow-2xl overflow-hidden">
+                <div class="form-overlay p-8 md:p-12">
+                    <div class="flex items-center mb-8 pb-4 border-b border-gray-200">
+                        <i class="fas fa-plane-departure text-3xl text-blue-600 mr-4"></i>
+                        <h3 class="text-2xl font-bold text-gray-800">Detail Pemesanan Anda</h3>
+                    </div>
+                    
+                    <form>
+                        <div class="flex flex-wrap -mx-4 mb-8">
+                            <div class="w-full md:w-1/2 px-4 mb-6 md:mb-0">
+                                <label for="name" class="block text-gray-700 font-semibold mb-2">
+                                    <i class="fas fa-user text-blue-500 mr-2"></i>Nama Lengkap
+                                </label>
+                                <input type="text" id="name" name="name" placeholder="Masukkan nama lengkap Anda" 
+                                    class="w-full bg-white border border-gray-300 rounded-lg px-4 py-3.5 input-focus transition duration-300 ease-in-out hover:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" 
+                                    required>
+                            </div>
+                            <div class="w-full md:w-1/2 px-4">
+                                <label for="email" class="block text-gray-700 font-semibold mb-2">
+                                    <i class="fas fa-envelope text-blue-500 mr-2"></i>Email
+                                </label>
+                                <input type="email" id="email" name="email" placeholder="email@example.com" 
+                                    class="w-full bg-white border border-gray-300 rounded-lg px-4 py-3.5 input-focus transition duration-300 ease-in-out hover:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" 
+                                    required>
+                            </div>
+                        </div>
+                        
+                        <div class="flex flex-wrap -mx-4 mb-8">
+                            <div class="w-full md:w-1/2 px-4 mb-6 md:mb-0">
+                                <label for="phone" class="block text-gray-700 font-semibold mb-2">
+                                    <i class="fas fa-phone text-blue-500 mr-2"></i>Nomor Telepon
+                                </label>
+                                <div class="relative">
+                                    <span class="absolute left-0 top-0 h-full flex items-center pl-4 text-gray-500">+62</span>
+                                    <input type="tel" id="phone" name="phone" placeholder="8123456789" 
+                                        class="w-full bg-white border border-gray-300 rounded-lg pl-12 pr-4 py-3.5 input-focus transition duration-300 ease-in-out hover:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" 
+                                        required>
+                                </div>
+                            </div>
+                            <div class="w-full md:w-1/2 px-4">
+                                <label for="package" class="block text-gray-700 font-semibold mb-2">
+                                    <i class="fas fa-suitcase-rolling text-blue-500 mr-2"></i>Paket Wisata
+                                </label>
+                                <div class="relative">
+                                    <select id="package" name="package" 
+                                        class="appearance-none w-full bg-white border border-gray-300 rounded-lg px-4 py-3.5 input-focus transition duration-300 ease-in-out hover:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" 
+                                        required>
+                                        <option value="">Pilih Paket Wisata</option>
+                                        <option value="bali">Bali Paradise</option>
+                                        <option value="yogyakarta">Yogyakarta Heritage</option>
+                                        <option value="labuan-bajo">Labuan Bajo Adventure</option>
+                                        <option value="other">Lainnya</option>
+                                    </select>
+                                    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gray-500">
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex flex-wrap -mx-4 mb-8">
+                            <div class="w-full md:w-1/2 px-4 mb-6 md:mb-0">
+                                <label for="date" class="block text-gray-700 font-semibold mb-2">
+                                    <i class="fas fa-calendar-alt text-blue-500 mr-2"></i>Tanggal Keberangkatan
+                                </label>
+                                <div class="relative">
+                                    <input type="date" id="date" name="date" 
+                                        class="w-full bg-white border border-gray-300 rounded-lg px-4 py-3.5 input-focus transition duration-300 ease-in-out hover:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" 
+                                        required>
+                                    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gray-500">
+                                        <i class="fas fa-calendar-day"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w-full md:w-1/2 px-4">
+                                <label for="participants" class="block text-gray-700 font-semibold mb-2">
+                                    <i class="fas fa-users text-blue-500 mr-2"></i>Jumlah Peserta
+                                </label>
+                                <div class="relative">
+                                    <input type="number" id="participants" name="participants" min="1" placeholder="Masukkan jumlah peserta" 
+                                        class="w-full bg-white border border-gray-300 rounded-lg px-4 py-3.5 input-focus transition duration-300 ease-in-out hover:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" 
+                                        required>
+                                    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gray-500">
+                                        <i class="fas fa-user-plus"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-8">
+                            <label for="special-request" class="block text-gray-700 font-semibold mb-2">
+                                <i class="fas fa-clipboard-list text-blue-500 mr-2"></i>Permintaan Khusus
+                            </label>
+                            <textarea id="special-request" name="special-request" rows="4" placeholder="Berikan informasi tentang permintaan khusus Anda..." 
+                                class="w-full bg-white border border-gray-300 rounded-lg px-4 py-3.5 input-focus transition duration-300 ease-in-out hover:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"></textarea>
+                        </div>
+                        
+                        <div class="mb-10 bg-blue-50 rounded-lg p-4 border-l-4 border-blue-500">
+                            <label class="flex items-start">
+                                <input type="checkbox" name="terms" class="mt-1 mr-3 h-5 w-5 text-blue-600 focus:ring-blue-500 focus:outline-none rounded" required>
+                                <span class="text-gray-700">
+                                    Saya menyetujui <a href="#" class="text-blue-600 hover:underline font-semibold">syarat dan ketentuan</a> yang berlaku, termasuk pembayaran deposit dan kebijakan pembatalan.
+                                </span>
+                            </label>
+                        </div>
+                        
+                        <div class="text-center">
+                            <button type="submit" class="gradient-bg hover:bg-blue-700 text-white py-4 px-12 rounded-full text-lg font-semibold transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg flex items-center justify-center mx-auto">
+                                <span>Kirim Pemesanan</span>
+                                <i class="fas fa-paper-plane ml-2"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="max-w-4xl mx-auto mt-12 text-center">
+                <p class="text-gray-600">
+                    <i class="fas fa-headset text-blue-500 mr-2"></i> Butuh bantuan? Hubungi kami di 
+                    <a href="tel:+6281234567890" class="text-blue-600 font-semibold hover:underline">081-234-567-890</a> atau 
+                    <a href="mailto:info@travel.example.com" class="text-blue-600 font-semibold hover:underline">info@travel.example.com</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="galeri" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Galeri Foto</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Lihat keindahan destinasi wisata yang akan Anda kunjungi.</p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition">
+                    <img src="images/gal1.jpg" alt="Destinasi Wisata 1" class="w-full h-48 md:h-56 lg:h-64 object-cover transform hover:scale-110 transition duration-500">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition">
+                    <img src="images/gal2.jpg" alt="Destinasi Wisata 2" class="w-full h-48 md:h-56 lg:h-64 object-cover transform hover:scale-110 transition duration-500">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition">
+                    <img src="images/gal3.jpg" alt="Destinasi Wisata 3" class="w-full h-48 md:h-56 lg:h-64 object-cover transform hover:scale-110 transition duration-500">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition">
+                    <img src="images/gal4.jpg" alt="Destinasi Wisata 4" class="w-full h-48 md:h-56 lg:h-64 object-cover transform hover:scale-110 transition duration-500">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition">
+                    <img src="images/gal5.jpg" alt="Destinasi Wisata 5" class="w-full h-48 md:h-56 lg:h-64 object-cover transform hover:scale-110 transition duration-500">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition">
+                    <img src="images/bali.jpg" alt="Destinasi Wisata 6" class="w-full h-48 md:h-56 lg:h-64 object-cover transform hover:scale-110 transition duration-500">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition">
+                    <img src="images/jogja.jpg" alt="Destinasi Wisata 7" class="w-full h-48 md:h-56 lg:h-64 object-cover transform hover:scale-110 transition duration-500">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition">
+                    <img src="images/bromo.jpg" alt="Destinasi Wisata 8" class="w-full h-48 md:h-56 lg:h-64 object-cover transform hover:scale-110 transition duration-500">
+                </div>
+            </div>
+            
+            <div class="text-center mt-8">
+                <a href="gallery.html" class="inline-block bg-blue-600 hover:bg-blue-700 text-white py-3 px-8 rounded-lg text-lg font-semibold transition">Lihat Lebih Banyak</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Testimoni Pelanggan</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Apa kata mereka yang telah menggunakan jasa kami.</p>
+            </div>
+            
+            <div class="flex flex-wrap -mx-4">
+                <!-- Testimonial 1 -->
+                <div class="w-full md:w-1/3 px-4 mb-8">
+                    <div class="bg-white p-6 rounded-lg shadow-md h-full relative">
+                        <div class="text-blue-600 text-6xl absolute top-4 left-4 opacity-10">"</div>
+                        <div class="relative z-10">
+                            <p class="text-gray-600 mb-6">Perjalanan yang sangat menyenangkan! Tour guide sangat profesional dan ramah. Pemandangan indah dan akomodasi yang nyaman. Sangat direkomendasikan!</p>
+                            <div class="flex items-center">
+                                <img src="images/pp.avif" alt="Testimoni 1" class="w-12 h-12 rounded-full mr-4">
+                                <div>
+                                    <h4 class="font-bold">Budi Santoso</h4>
+                                    <div class="text-yellow-500">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="w-full md:w-1/3 px-4 mb-8">
+                    <div class="bg-white p-6 rounded-lg shadow-md h-full relative">
+                        <div class="text-blue-600 text-6xl absolute top-4 left-4 opacity-10">"</div>
+                        <div class="relative z-10">
+                            <p class="text-gray-600 mb-6">Pelayanan luar biasa! Mulai dari pemesanan hingga perjalanan pulang semuanya terorganisir dengan baik. Paket premium memang sebanding dengan harganya.</p>
+                            <div class="flex items-center">
+                                <img src="images/pp.avif" alt="Testimoni 2" class="w-12 h-12 rounded-full mr-4">
+                                <div>
+                                    <h4 class="font-bold">Ratna Dewi</h4>
+                                    <div class="text-yellow-500">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="w-full md:w-1/3 px-4 mb-8">
+                    <div class="bg-white p-6 rounded-lg shadow-md h-full relative">
+                        <div class="text-blue-600 text-6xl absolute top-4 left-4 opacity-10">"</div>
+                        <div class="relative z-10">
+                            <p class="text-gray-600 mb-6">Ini adalah perjalanan keluarga terbaik yang pernah kami lakukan. Anak-anak sangat senang dan seluruh perjalanan terasa nyaman. Terima kasih Wonderful Journey!</p>
+                            <div class="flex items-center">
+                                <img src="images/pp.avif" alt="Testimoni 3" class="w-12 h-12 rounded-full mr-4">
+                                <div>
+                                    <h4 class="font-bold">Ahmad Fauzi</h4>
+                                    <div class="text-yellow-500">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Location Section -->
+    <section id="kontak" class="py-20 bg-gradient-to-b from-white to-blue-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800">Kontak & Lokasi</h2>
+                <div class="w-24 h-1 bg-blue-600 mx-auto mb-8 rounded-full"></div>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">Hubungi kami untuk informasi lebih lanjut atau kunjungi lokasi kami.</p>
+            </div>
+            
+            <div class="flex flex-wrap justify-center items-stretch -mx-4">
+                <!-- Contact Info Card -->
+                <div class="w-full md:w-1/2 px-4 mb-8">
+                    <div class="bg-white rounded-xl shadow-lg p-8 h-full transform transition duration-300 hover:shadow-xl hover:-translate-y-1">
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-800">Hubungi Kami</h3>
+                        </div>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-600 mr-3 mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                </svg>
+                                <p class="text-gray-700 leading-relaxed">Jl. Raya, Kota Bandung, Jawa Barat</p>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-600 mr-3 mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                </svg>
+                                <p class="text-gray-700">Telepon: <a href="tel:1234567890" class="text-blue-600 hover:underline">(123) 456-7890</a></p>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-600 mr-3 mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                </svg>
+                                <p class="text-gray-700">Email: <a href="mailto:4H2u4@example.com" class="text-blue-600 hover:underline">4H2u4@example.com</a></p>
+                            </div>
+                            
+                            <!-- Social Media Icons -->
+                            <div class="pt-4 mt-6 border-t border-gray-200">
+                                <div class="flex space-x-4 mt-4">
+                                    <a href="#" class="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white hover:bg-blue-600 transition">
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                            <path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd"></path>
+                                        </svg>
+                                    </a>
+                                    <a href="#" class="w-10 h-10 bg-pink-500 rounded-full flex items-center justify-center text-white hover:bg-pink-600 transition">
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                            <path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd"></path>
+                                        </svg>
+                                    </a>
+                                    <a href="#" class="w-10 h-10 bg-blue-400 rounded-full flex items-center justify-center text-white hover:bg-blue-500 transition">
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                            <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Map Card -->
+                <div class="w-full md:w-1/2 px-4 mb-8">
+                    <div class="bg-white rounded-xl shadow-lg p-8 h-full transform transition duration-300 hover:shadow-xl hover:-translate-y-1">
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-800">Lokasi Kami</h3>
+                        </div>
+                        
+                        <div class="w-full h-64 md:h-80 rounded-xl overflow-hidden shadow-md mb-6">
+                            <iframe 
+                                class="w-full h-full border-0"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31694.569068428733!2d107.5941783!3d-6.9147444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e7c50b1c94fd%3A0x4027a76e3530a40!2sBandung%2C%20Jawa%20Barat!5e0!3m2!1sen!2sid!4v1700000000000!5m2!1sen!2sid" 
+                                allowfullscreen="" 
+                                loading="lazy">
+                            </iframe>
+                        </div>
+                        
+                        <div class="text-center">
+                            <a href="https://maps.google.com/maps?q=Bandung,+Jawa+Barat" target="_blank" class="inline-flex items-center justify-center px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition duration-300 shadow-md hover:shadow-lg">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                </svg>
+                                Buka di Google Maps
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Contact Form -->
+            <div class="bg-white rounded-xl shadow-lg p-8 mt-8 max-w-4xl mx-auto">
+                <h3 class="text-2xl font-bold text-gray-800 mb-6 text-center">Kirim Pesan</h3>
+                <form>
+                    <div class="flex flex-wrap -mx-2 mb-4">
+                        <div class="w-full md:w-1/2 px-2 mb-4 md:mb-0">
+                            <label for="name" class="block text-gray-700 font-medium mb-2">Nama</label>
+                            <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Nama Anda">
+                        </div>
+                        <div class="w-full md:w-1/2 px-2">
+                            <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="email@example.com">
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <label for="subject" class="block text-gray-700 font-medium mb-2">Subjek</label>
+                        <input type="text" id="subject" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Subjek pesan">
+                    </div>
+                    <div class="mb-6">
+                        <label for="message" class="block text-gray-700 font-medium mb-2">Pesan</label>
+                        <textarea id="message" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Tulis pesan Anda disini..."></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="px-8 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition duration-300 shadow-md hover:shadow-lg">
+                            Kirim Pesan
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section --> 
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap -mx-4">
+                <!-- Company Info -->
+                <div class="w-full md:w-1/4 px-4 mb-8 md:mb-0">
+                    <h3 class="text-2xl font-bold mb-4">Wonderful<span class="text-green-500">Journey</span></h3>
+                    <p class="text-gray-400 mb-4">Menyediakan pengalaman wisata terbaik dengan pelayanan profesional dan harga terjangkau.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="w-full md:w-1/4 px-4 mb-8 md:mb-0">
+                    <h4 class="text-lg font-bold mb-4">Link Cepat</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html#beranda" class="text-gray-400 hover:text-white transition">Beranda</a></li>
+                        <li><a href="index.html#tentang-kami" class="text-gray-400 hover:text-white transition">Tentang Kami</a></li>
+                        <li><a href="index.html#paket-wisata" class="text-gray-400 hover:text-white transition">Paket Wisata</a></li>
+                        <li><a href="gallery.html" class="text-gray-400 hover:text-white transition">Galeri</a></li>
+                        <!-- <li><a href="index.html#blog" class="text-gray-400 hover:text-white transition">Blog</a></li> -->
+                        <li><a href="index.html#kontak" class="text-gray-400 hover:text-white transition">Kontak</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="w-full md:w-1/4 px-4 mb-8 md:mb-0">
+                    <h4 class="text-lg font-bold mb-4">Informasi Kontak</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-green-500 mt-1 mr-3"></i>
+                            <span class="text-gray-400">Jl. Wisata Indah No. 123, Jakarta Selatan</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt text-green-500 mr-3"></i>
+                            <span class="text-gray-400">+62 812 3456 7890</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope text-green-500 mr-3"></i>
+                            <span class="text-gray-400">info@wonderfuljourney.com</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Newsletter -->
+                <div class="w-full md:w-1/4 px-4">
+                    <h4 class="text-lg font-bold mb-4">Newsletter</h4>
+                    <p class="text-gray-400 mb-4">Dapatkan informasi terbaru tentang promo dan paket wisata kami.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Email Anda" class="px-4 py-2 w-full rounded-l-lg focus:outline-none text-gray-800">
+                        <button type="submit" class="bg-green-500 hover:bg-green-600 px-4 py-2 rounded-r-lg transition">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+                <p class="text-gray-400">&copy; 2025 Wonderful Journey. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
